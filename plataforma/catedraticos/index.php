@@ -1,9 +1,10 @@
 <!doctype html>
 <html class="no-js" lang="en">
 
-<?php include 'encabezado.php';?>
-<?php include 'panel-izquierdo.php';?>
-<?php include 'panel-superior.php';?>
+<?php include 'php/encabezado.php';?>
+<?php include 'php/panel-izquierdo.php';?>
+<?php include 'php/panel-superior.php';?>
+
 
 <body>    
 
@@ -727,18 +728,8 @@
             </div>
         </div>
     </div>
-    
-    <div class="footer-copyright-area">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="footer-copy-right">
-                        <p>Copyright © 2018. All rights reserved. Template by <a href="https://colorlib.com/wp/templates/">Colorlib</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
+    <?php include 'php/pie-pagina.php';?>
 
     <!-- jquery
 		============================================ -->
