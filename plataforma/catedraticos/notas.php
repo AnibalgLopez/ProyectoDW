@@ -1,7 +1,6 @@
 <?php include 'php/encabezado.php';?>
 <?php include 'php/panel-izquierdo.php';?>
 <?php include 'php/panel-superior.php';?>
-
 <body>
 
     <div class="container">
@@ -37,15 +36,14 @@
 			
         </div>
     </div>
-
-    <!-- Edit Modal HTML -->
-    <?php include 'php/modal_add.php';?>
 	<!-- Edit Modal HTML -->
-	<?php include 'php/modal_edit.php';?>
+	<?php include "php/modal_add.php";?>
+	<!-- Edit Modal HTML -->
+	<?php include "php/modal_edit.php";?>
 	<!-- Delete Modal HTML -->
-	<?php include 'php/modal_delete.php';?>
-
-    <?php include 'php/pie-pagina.php';?>
+	<?php include "php/modal_delete.php";?>
+	
+	<?php include 'php/pie-pagina.php';?>
 
     <!-- jquery
         ============================================ -->
@@ -107,6 +105,6 @@
     <script src="js/main.js"></script>
 
     <script src="js/script.js"></script>
-    
+	
 </body>
 </html>
