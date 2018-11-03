@@ -42,7 +42,7 @@
                                     <ul id="demopro" class="collapse dropdown-header-top">
                                         <li><a href="all-students.html">All Students</a>
                                         </li>
-                                        <li><a href="add-student.html">Add Student</a>
+                                        <li><a href="add-student.php">Add Student</a>
                                         </li>
                                         <li><a href="edit-student.html">Edit Student</a>
                                         </li>
