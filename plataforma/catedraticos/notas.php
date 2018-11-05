@@ -11,7 +11,7 @@
 						<h2><b>Notas</b></h2>
 					</div>
 					<div class="col-sm-6">
-						<a href="#addProductModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Agregar nota</span></a>
+						<a href="#agregarNotaModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Agregar nota</span></a>
 					</div>
                 </div>
             </div>

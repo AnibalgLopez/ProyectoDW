@@ -1,4 +1,4 @@
-<div id="addProductModal" class="modal fade">
+<div id="agregarNotaModal" class="modal fade">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<form name="add_product" id="add_product">
@@ -9,36 +9,35 @@
 					<div class="modal-body">					
 						<div class="form-group">
 							<label>SEMESTRE</label>
-							<input type="text" name="code"  id="code" class="form-control" required>
-							
+							<input type="number" name="semestre"  id="semestre" class="form-control" required>							
 						</div>
 						<div class="form-group">
 							<label>FECHA</label>
-							<input type="date" name="name" id="name" class="form-control" required>
+							<input type="date" name="fecha" id="fecha" class="form-control" required>
 						</div>
                         <div class="form-group">
 							<label>PRIMER PARCIAL</label>
-							<input type="text" name="lastname" id="lastname" class="form-control" required>
+							<input type="number" name="parcial1" id="parcial1" class="form-control" required>
 						</div>
 						<div class="form-group">
 							<label>SEGUNDO PARCIAL</label>
-							<input type="text" name="category" id="category" class="form-control" required>
+							<input type="number" name="parcial2" id="parcial2" class="form-control" required>
 						</div>
 						<div class="form-group">
 							<label>ACTIVIDADES</label>
-							<input type="text" name="stock" id="stock" class="form-control" required>
+							<input type="number" name="actividades" id="actividades" class="form-control" required>
 						</div>
 						<div class="form-group">
 							<label>EXAMEN FINAL</label>
-							<input type="text" name="price" id="price" class="form-control" required>
+							<input type="number" name="examen" id="examen" class="form-control" required>
 						</div>
                         <div class="form-group">
 							<label>CURSO</label>
-							<input type="text" name="vecindad" id="vecindad" class="form-control" required>
+							<input type="number" name="curso" id="curso" class="form-control" required>
 						</div>		
                         <div class="form-group">
 							<label>ALUMNO</label>
-							<input type="text" name="lugar" id="lugar" class="form-control" required>
+							<input type="number" name="alumno" id="alumno" class="form-control" required>
 						</div>			
 					</div>
 					<div class="modal-footer">
@@ -48,5 +47,4 @@
 				</form>
 			</div>
 		</div>
-	</div>
 </div>
