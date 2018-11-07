@@ -6,6 +6,7 @@
 <?php include 'php/panel-superior.php';?>
 
 
+
 <body>    
 
     <!-- Mobile Menu start -->
@@ -38,15 +39,15 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a data-toggle="collapse" data-target="#demopro" href="#">Students <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                                <li><a data-toggle="collapse" data-target="#demopro" href="#">Alumnos <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                     <ul id="demopro" class="collapse dropdown-header-top">
-                                        <li><a href="all-students.html">All Students</a>
+                                        <li><a href="all-students.php">All Students</a>
                                         </li>
                                         <li><a href="add-student.php">Add Student</a>
                                         </li>
-                                        <li><a href="edit-student.html">Edit Student</a>
+                                        <li><a href="edit-student.php">Edit Student</a>
                                         </li>
-                                        <li><a href="student-profile.html">Student Profile</a>
+                                        <li><a href="student-profile.php">Student Profile</a>
                                         </li>
                                     </ul>
                                 </li>
