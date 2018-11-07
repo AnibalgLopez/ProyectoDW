@@ -30,10 +30,10 @@
                         <li>
                             <a class="has-arrow" href="all-students.html" aria-expanded="false"><span class="educate-icon educate-student icon-wrap"></span> <span class="mini-click-non">Alumnos</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="All Students" href="all-students.html"><span class="mini-sub-pro">Listado Alumnos</span></a></li>
+                                <li><a title="All Students" href="all-students.php"><span class="mini-sub-pro">Listado Alumnos</span></a></li>
                                 <li><a title="Add Students" href="add-student.php"><span class="mini-sub-pro">Ingreso de Alumnos</span></a></li>
-                                <li><a title="Edit Students" href="edit-student.html"><span class="mini-sub-pro">Opciones Alumnos</span></a></li>
-                                <li><a title="Students Profile" href="student-profile.html"><span class="mini-sub-pro">Información Alumnos</span></a></li>
+                                <li><a title="Edit Students" href="edit-student.php"><span class="mini-sub-pro">Opciones Alumnos</span></a></li>
+                                <li><a title="Students Profile" href="student-profile.php"><span class="mini-sub-pro">Información Alumnos</span></a></li>
                             </ul>
                         </li>
                         <li>
