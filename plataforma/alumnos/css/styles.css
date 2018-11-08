@@ -1,0 +1,21 @@
+ul {
+  clear: both;
+  float: left;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+   float: left;
+}
+
+ul li a {
+  padding: .3em;
+  display: block;
+  text-decoration: none;
+  color: #ddd;
+  background: #09c;
+  border: 3px solid #07c;
+}
