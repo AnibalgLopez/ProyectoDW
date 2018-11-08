@@ -82,7 +82,7 @@ $( "#add_product" ).submit(function( event ) {
       success: function(datos){
       $("#resultados").html(datos);
       load(1);
-      $('#agregarNotaModal').modal('hide');
+      $('#addProductModal').modal('hide');
       }
   });
   event.preventDefault();
