@@ -1,4 +1,4 @@
-<div id="agregarNotaModal" class="modal fade">
+<div id="addProductModal" class="modal fade">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<form name="add_product" id="add_product">

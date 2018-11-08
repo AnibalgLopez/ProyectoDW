@@ -1,7 +1,7 @@
 $(function() {
-  load(1);
+  principal(1);
 });
-function load(page){
+function principal(page){
   var query=$("#q").val();
   var per_page=10;
   var parametros = {"action":"ajax","page":page,'query':query,'per_page':per_page};
@@ -44,14 +44,14 @@ $('#editProductModal').on('show.bs.modal', function (event) {
   $('#edit_id').val(id)
 })
 
-$('#deleteProductModal').on('show.bs.modal', function (event) {
+$('#deleteProductModal').on('show.bs.modal', function eliminar (event) {
   var button = $(event.relatedTarget) // Button that triggered the modal
   var id = button.data('id') 
   $('#delete_id').val(id)
 })
 
 
-$( "#edit_product" ).submit(function( event ) {
+$( "#edit_product" ).submit(function editar( event ) {
   var parametros = $(this).serialize();
   $.ajax({
       type: "POST",
@@ -70,7 +70,7 @@ $( "#edit_product" ).submit(function( event ) {
 });
 
 
-$( "#add_product" ).submit(function( event ) {
+$( "#add_product" ).submit(function agregar( event ) {
   var parametros = $(this).serialize();
   $.ajax({
       type: "POST",
@@ -88,7 +88,7 @@ $( "#add_product" ).submit(function( event ) {
   event.preventDefault();
 });
 
-$( "#delete_product" ).submit(function( event ) {
+$( "#delete_product" ).submit(function eliminar2( event ) {
   var parametros = $(this).serialize();
   $.ajax({
       type: "POST",

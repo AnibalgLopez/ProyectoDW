@@ -1,32 +1,30 @@
 <?php
-	if (empty($_POST['name'])){
+	/*if (empty($_POST['name'])){
 		$errors[] = "Ingresa el nombre del producto.";
-	} elseif (!empty($_POST['name'])){
+	} elseif (!empty($_POST['name'])){*/
 	require_once ("../conexion.php");//Contiene funcion que conecta a la base de datos
 	// escaping, additionally removing everything that could be (html/javascript-) code
-    $prod_code = mysqli_real_escape_string($mysqli,(strip_tags($_POST["code"],ENT_QUOTES)));
-    $prod_name = mysqli_real_escape_string($mysqli,(strip_tags($_POST["name"],ENT_QUOTES)));
-    $lastname = mysqli_real_escape_string($mysqli,(strip_tags($_POST["lastname"],ENT_QUOTES)));
-	$prod_ctry = mysqli_real_escape_string($mysqli,(strip_tags($_POST["category"],ENT_QUOTES)));
-	$stock = mysqli_real_escape_string($mysqli,(strip_tags($_POST["stock"],ENT_QUOTES)));
-    $price = mysqli_real_escape_string($mysqli,(strip_tags($_POST["price"],ENT_QUOTES)));
-    $vecindad = mysqli_real_escape_string($mysqli,(strip_tags($_POST["vecindad"],ENT_QUOTES)));
-    $lugar = mysqli_real_escape_string($mysqli,(strip_tags($_POST["lugar"],ENT_QUOTES)));
+    $semestre = mysqli_real_escape_string($mysqli,(strip_tags($_POST["semestre"],ENT_QUOTES)));
+    $fecha = mysqli_real_escape_string($mysqli,(strip_tags($_POST["fecha"],ENT_QUOTES)));
+    $parcial1 = mysqli_real_escape_string($mysqli,(strip_tags($_POST["parcial1"],ENT_QUOTES)));
+	$parcial2 = mysqli_real_escape_string($mysqli,(strip_tags($_POST["parcial2"],ENT_QUOTES)));
+	$actividades = mysqli_real_escape_string($mysqli,(strip_tags($_POST["actividades"],ENT_QUOTES)));
+    $examen = mysqli_real_escape_string($mysqli,(strip_tags($_POST["examen"],ENT_QUOTES)));
+    $curso = mysqli_real_escape_string($mysqli,(strip_tags($_POST["curso"],ENT_QUOTES)));
+    $alumno = mysqli_real_escape_string($mysqli,(strip_tags($_POST["alumno"],ENT_QUOTES)));
+ 	// REGISTRAR INFORMACION A LA BASE DE DATOS
+    $sql = "INSERT INTO TB_NOTAS(SEM_NOTA, FECHA_NOTA, PP_NOTA, SP_NOTA, ACT_NOTA, EF_NOTA, ID_CURSO, ID_ALUMNO)
+	VALUES ('$semestre','$fecha', '$parcial1', '$parcial2','$actividades','$examen', '$curso', '$alumno')";
 
-	// REGISTER data into database
-    $sql = "INSERT INTO TB_NOTAS(SEM_NOTA, FECHA_NOTA, PP_NOTA, SP_NOTA, ACT_NOTA, EF_NOTA, ID_CURSO, ID_ALUMNO) VALUES ('$prod_code','$prod_name', '$lastname', '$prod_ctry','$stock','$price', '$vecindad', '$lugar')";
     $query = mysqli_query($mysqli,$sql);
     // if product has been added successfully
     if ($query) {
-        $messages[] = "El producto ha sido guardado con éxito.";
+        $messages[] = "La nota ha sido guardada con éxito.";
     } else {
         $errors[] = "Lo sentimos, el registro falló. Por favor, regrese y vuelva a intentarlo.";
     }
 		
-	} else 
-	{
-		$errors[] = "desconocido.";
-	}
+	//} 
 if (isset($errors)){
 			
 			?>

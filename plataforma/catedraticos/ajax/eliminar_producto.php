@@ -4,11 +4,11 @@
 	} elseif (!empty($_POST['delete_id'])){
 	require_once ("../conexion.php");//Contiene funcion que conecta a la base de datos
 	// escaping, additionally removing everything that could be (html/javascript-) code
-    $id_producto=intval($_POST['delete_id']);
+    $id_nota=intval($_POST['delete_id']);
 	
 
 	// DELETE FROM  database
-    $sql = "DELETE FROM TB_NOTAS WHERE ID_NOTA='$id_producto'";
+    $sql = "DELETE FROM TB_NOTAS WHERE ID_NOTA='$id_nota'";
     $query = mysqli_query($mysqli,$sql);
     // if product has been added successfully
     if ($query) {

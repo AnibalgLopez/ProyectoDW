@@ -18,9 +18,9 @@
 			<div class='col-sm-4 pull-right'>
 				<div id="custom-search-input">
                             <div class="input-group col-md-12">
-                                <input type="text" class="form-control" placeholder="Buscar"  id="q" onkeyup="load(1);" />
+                                <input type="text" class="form-control" placeholder="Buscar"  id="q" onkeyup="principal(1);" />
                                 <span class="input-group-btn">
-                                    <button class="btn btn-info" type="button" onclick="load(1);">
+                                    <button class="btn btn-info" type="button" onclick="principal(1);">
                                         <span class="glyphicon glyphicon-search"></span>
                                     </button>
                                 </span>
@@ -37,12 +37,16 @@
         </div>
     </div>
 	<!-- Edit Modal HTML -->
-	<?php include("html/modal_add.php");?>
+	<?php include "php/modal_add.php";?>
 	<!-- Edit Modal HTML -->
-	<?php include("html/modal_edit.php");?>
+	<?php include "php/modal_edit.php";?>
 	<!-- Delete Modal HTML -->
-	<?php include("html/modal_delete.php");?>
+	<?php include "php/modal_delete.php";?>
+
+	<?php include 'php/pie-pagina.php';?>
+	
 	<script src="js/script.js"></script>
+
 	
 </body>
 </html>
