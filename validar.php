@@ -32,12 +32,22 @@ if (mysqli_num_rows($sql) == 1) {
 
     if (mysqli_num_rows($sql2) == 1) {  
 
-        echo("EL USUARIO ES ADMINISTRADOR");
         header('Location: plataforma/catedraticos'); // LO DIRECCIONAS AL MENU QUE DESEEMOS
     } 
-    else {
-        echo("EL USUARIO ES ALUMNO");
-     }
+
+    $sql2 =mysqli_query ($mysqli, "SELECT * FROM TB_USUARIO  WHERE NOM_USUARIO = '$usuario' AND TIPO_USUARIO = 2 ");
+
+    if(mysqli_num_rows($sql2) == 1){
+        header('Location: plataforma/alumnos');
+    }
+
+    $sql2 =mysqli_query ($mysqli, "SELECT * FROM TB_USUARIO  WHERE NOM_USUARIO = '$usuario' AND TIPO_USUARIO = 0 ");
+
+    if(mysqli_num_rows($sql2) == 1){
+        header('Location: plataforma/admin');
+    }
+
+
 }
  else {
   $_SESSION["error"] = 1;

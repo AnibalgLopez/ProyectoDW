@@ -13,9 +13,6 @@
               <li class="nav-item">
                 <a href="login.php" class="nav-link">Iniciar Sesión</a>
               </li>
-              <li class="nav-item">
-                <a href="register.html" class="nav-link">Registro</a>
-              </li>
             </ul>
             
           </div>
