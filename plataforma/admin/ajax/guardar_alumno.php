@@ -27,7 +27,7 @@
     if ($query2) {
         $messages[] = "Se ha guardado con éxito el usuario.";
 
-         $sql = "INSERT INTO `tb_alumnos`(`NOM_ALUMNO`, `APE__ALUMNO`, `TEL_ALUMNO`,`EMAIL_ALUMNO`,`DIR_ALUMNO`,`ID_CARRERA`,`ID_USUARIO`) VALUES ('$prod_code', '$prod_name', '$lastname', '$prod_ctry', '$stock', '$price', '$idusuario' )";
+         $sql = "INSERT INTO `tb_alumnos`(`NOM_ALUMNO`, `APE_ALUMNO`, `TEL_ALUMNO`,`EMAIL_ALUMNO`,`DIR_ALUMNO`,`ID_CARRERA`,`ID_USUARIO`) VALUES ('$prod_code', '$prod_name', '$lastname', '$prod_ctry', '$stock', '$price', '$idusuario' )";
 
          $query = mysqli_query($mysqli, $sql);
     } else {
