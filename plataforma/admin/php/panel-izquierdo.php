@@ -28,7 +28,11 @@
                             <a class="submenu-angle chart-mini-nb-dp" href="cursos.php" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Cursos</span></a>
                         </li>
                         <li>
-                            <a class="submenu-angle chart-mini-nb-dp" href="asignaciones.php" aria-expanded="false"><span class="educate-icon educate-form icon-wrap"></span> <span class="mini-click-non">Asignaciones</span></a>
+                        <a class="has-arrow" href="all-students.html" aria-expanded="false"><span class="educate-icon educate-form icon-wrap"></span> <span class="mini-click-non">Asignaciones</span></a>
+                            <ul class="submenu-angle" aria-expanded="false">
+                                <li><a title="All Students" href="asig-catedraticos.php"><span class="mini-sub-pro">Asignar Catedráticos</span></a></li>
+                                <li><a title="Add Students" href="asig-alumnos.php"><span class="mini-sub-pro">Asignar Alumnos</span></a></li>
+                            </ul>
                         </li>
                     </ul>
                 </nav>

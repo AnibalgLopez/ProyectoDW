@@ -1,6 +1,3 @@
-<!doctype html>
-<html class="no-js" lang="en">
-
 <?php include 'php/encabezado.php';?>
 <?php include 'php/panel-izquierdo.php';?>
 <?php include 'php/panel-superior.php';?>
