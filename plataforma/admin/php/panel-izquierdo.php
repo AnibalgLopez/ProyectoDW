@@ -16,7 +16,7 @@
                             <a class="submenu-angle chart-mini-nb-dp" href="catedraticos.php" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span> <span class="mini-click-non">Catedráticos</span></a>
                         </li>
                         <li>
-                            <a class="submenu-angle" href="" aria-expanded="false"><span class="educate-icon educate-student icon-wrap"></span> <span class="mini-click-non">Alumnos</span></a>
+                            <a class="submenu-angle" href="alumnos.php" aria-expanded="false"><span class="educate-icon educate-student icon-wrap"></span> <span class="mini-click-non">Alumnos</span></a>
                         </li>
                         <li>
                             <a class="submenu-angle chart-mini-nb-dp" href="cursos.php" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Cursos</span></a>
