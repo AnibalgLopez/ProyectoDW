@@ -1,3 +1,10 @@
+<?php 
+session_start();
+if (!isset($_SESSION["usuario"])) {
+    header('Location: ../../login.php');
+}
+ ?>
+
 <!doctype html>
 <html class="no-js" lang="en">
 

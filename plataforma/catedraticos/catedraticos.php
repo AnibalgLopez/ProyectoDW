@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 <?php 
 session_start();
 if (!isset($_SESSION["usuario"])) {
@@ -7,6 +5,7 @@ if (!isset($_SESSION["usuario"])) {
 }
  ?>
 
+<<<<<<< HEAD
 <?php include 'php/encabezado.php';?>
 <?php include 'php/panel-izquierdo.php';?>
 <?php include 'php/panel-superior.php';?>
