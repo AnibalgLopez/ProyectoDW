@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+
+<?php 
+session_start();
+if (!isset($_SESSION["usuario"])) {
+    header('Location: ../../login.php');
+}
+ ?>
+
 <?php include 'php/encabezado.php';?>
 <?php include 'php/panel-izquierdo.php';?>
 <?php include 'php/panel-superior.php';?>
