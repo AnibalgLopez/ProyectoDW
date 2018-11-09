@@ -31,10 +31,6 @@
 						<div class="form-group">
 							<label>ID Carrera</label>
 							<input type="text" name="price" id="price" class="form-control" required>
-						</div>
-                        <div class="form-group">
-							<label>ID Usuario</label>
-							<input type="text" name="vecindad" id="vecindad" class="form-control" required>
 						</div>					
 					</div>
 					<div class="modal-footer">

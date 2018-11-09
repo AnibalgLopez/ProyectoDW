@@ -11,23 +11,37 @@
 	$prod_ctry = mysqli_real_escape_string($mysqli,(strip_tags($_POST["category"],ENT_QUOTES)));
 	$stock = mysqli_real_escape_string($mysqli,(strip_tags($_POST["stock"],ENT_QUOTES)));
     $price = mysqli_real_escape_string($mysqli,(strip_tags($_POST["price"],ENT_QUOTES)));
-    $vecindad = mysqli_real_escape_string($mysqli,(strip_tags($_POST["vecindad"],ENT_QUOTES)));
+    $rad = mt_rand(300,5000);
     
 
 	// REGISTER data into database
-    $sql = "INSERT INTO `tb_alumnos`(`NOM_ALUMNO`, `APE__ALUMNO`, `TEL_ALUMNO`, `EMAIL_ALUMNO`, `DIR_ALUMNO`, `ID_CARRERA`, `ID_USUARIO`) VALUES ('$prod_code','$prod_name','$lastname','$prod_ctry','$stock','$price','$vecindad')";
-    $query = mysqli_query($mysqli,$sql);
+    $sql = "INSERT INTO `tb_alumnos`(`NOM_ALUMNO`, `APE__ALUMNO`, `TEL_ALUMNO`, `EMAIL_ALUMNO`, `DIR_ALUMNO`, `ID_CARRERA`, `ID_USUARIO`) VALUES ('$prod_code','$prod_name','$lastname','$prod_ctry','$stock','$price','2')";
+
+   // $sql2 = "INSERT INTO `tb_usuario`(`NOM_USUARIO`, `PASS_USUARIO`, `TIPO_USUARIO`, `FECHA_USUARIO`,`ESTADO_USUARIO`) VALUES ('$prod_ctry', '$rad', '2', CURRENT_TIMESTAMP,'1')";
+
+    $query = mysqli_query($mysqli, $sql);
+   // $query2 = mysqli_query($mysqli, $sql2);
     // if product has been added successfully
     if ($query) {
         $messages[] = "Se ha guardado con éxito.";
     } else {
         $errors[] = "Lo sentimos, el registro falló. Por favor, regrese y vuelva a intentarlo.";
     }
+
+	/*if ($query2) {
+        $messages[] = "Se ha guardado con éxito.";
+    } else {
+        $errors[] = "Lo sentimos, el registro falló. Por favor, regrese y vuelva a intentarlo.";
+    }   */	
+
 		
 	} else 
 	{
 		$errors[] = "desconocido.";
 	}
+
+
+
 if (isset($errors)){
 			
 			?>
