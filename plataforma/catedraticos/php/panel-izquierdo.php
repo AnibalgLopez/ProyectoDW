@@ -14,6 +14,11 @@
                                 <li><a title="Students Profile" href="student-profile.php"><span class="mini-sub-pro">Información Alumnos</span></a></li>
                             </ul>
                         </li>
+
+                        <li>
+                            <a class="submenu-angle chart-mini-nb-dp" href="catedraticos.php" aria-expanded="false"><span class="educate-icon educate-data-table icon-wrap"></span> <span class="mini-click-non">Catedraticos</span></a>
+                        </li>
+
                         <li>
                             <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Cursos</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
