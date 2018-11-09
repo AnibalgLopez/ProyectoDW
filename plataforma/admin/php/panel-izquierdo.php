@@ -27,6 +27,9 @@
                                 <li><a title="All Students" href="asig-catedraticos.php"><span class="mini-sub-pro">Asignar Catedráticos</span></a></li>
                                 <li><a title="Add Students" href="asig-alumnos.php"><span class="mini-sub-pro">Asignar Alumnos</span></a></li>
                             </ul>
+                        <li>
+                            <a class="submenu-angle" href="salir.php" aria-expanded="false"><span class="educate-icon educate-student icon-wrap"></span> <span class="mini-click-non">Cerrar sesion</span></a>
+                        </li>
                         </li>
                     </ul>
                 </nav>

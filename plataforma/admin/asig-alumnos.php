@@ -12,26 +12,26 @@ else if ($_SESSION['usuario']['TIPO_USUARIO']!=0) {
 <?php include 'php/panel-izquierdo.php';?>
 <?php include 'php/panel-superior.php';?>
 
-<body>
+<body>    
 
     <div class="container">
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-						<h2>Administrar <b>Alumnos</b></h2>
+						<h2><b>Asignaciones Alumnos</b></h2>
 					</div>
 					<div class="col-sm-6">
-						<a href="#addProductModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Nuevo registro</span></a>
+						<a href="#addProductModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Agregar asignación</span></a>
 					</div>
                 </div>
             </div>
 			<div class='col-sm-4 pull-right'>
 				<div id="custom-search-input">
                             <div class="input-group col-md-12">
-                                <input type="text" class="form-control" placeholder="Buscar"  id="q" onkeyup="load(1);" />
+                                <input type="text" class="form-control" placeholder="Buscar"  id="q" onkeyup="principal(1);" />
                                 <span class="input-group-btn">
-                                    <button class="btn btn-info" type="button" onclick="load(1);">
+                                    <button class="btn btn-info" type="button" onclick="principal(1);">
                                         <span class="glyphicon glyphicon-search"></span>
                                     </button>
                                 </span>
@@ -48,10 +48,15 @@ else if ($_SESSION['usuario']['TIPO_USUARIO']!=0) {
         </div>
     </div>
 	<!-- Edit Modal HTML -->
-	<?php include("html/modal_add_alumno.php");?>
+	<?php include "php/modal_add_asig-alu.php";?>
 	<!-- Edit Modal HTML -->
-	<?php include("html/modal_edit_alumno.php");?>
+	<?php include "php/modal_edit_asig-alu.php";?>
 	<!-- Delete Modal HTML -->
-	<?php include("html/modal_delete_alumno.php");?>
-	<script src="js/script_alumno.js"></script>
+	<?php include "php/modal_delete_asig-alu.php";?>
+
+	<?php include 'php/pie-pagina.php';?>
+	
+	<script src="js/script_asig-alu.js"></script>
 </body>
+
+</html>

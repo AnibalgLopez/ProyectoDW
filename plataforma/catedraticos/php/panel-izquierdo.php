@@ -29,7 +29,9 @@
                         <li>
                             <a class="submenu-angle chart-mini-nb-dp" href="notas.php" aria-expanded="false"><span class="educate-icon educate-data-table icon-wrap"></span> <span class="mini-click-non">Notas</span></a>
                         </li>
-                        
+                        <li>
+                                <a class="submenu-angle" href="salir.php" aria-expanded="false"><span class="educate-icon educate-student icon-wrap"></span> <span class="mini-click-non">Cerrar sesion</span></a>
+                        </li>
                     </ul>
                 </nav>
             </div>

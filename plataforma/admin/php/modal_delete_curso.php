@@ -3,7 +3,7 @@
 			<div class="modal-content">
 				<form name="delete_product" id="delete_product">
 					<div class="modal-header">						
-						<h4 class="modal-title">Eliminar Asignación</h4>
+						<h4 class="modal-title">Eliminar Curso</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
 					<div class="modal-body">					
