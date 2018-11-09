@@ -51,6 +51,7 @@ if($action == 'ajax'){
 						<th class='text-center'>Email</th>
 						<th class='text-right'>Dirección</th>
                         <th class='text-center'>ID Carrera</th>
+                        
 						<th></th>
 					</tr>
 				</thead>
@@ -65,6 +66,7 @@ if($action == 'ajax'){
 							$prod_ctry=$row['EMAIL_ALUMNO'];
 							$prod_qty=$row['DIR_ALUMNO'];
                             $price=$row['ID_CARRERA'];
+                          
 							$finales++;
 						?>	
 						<tr class="<?php;?>">
