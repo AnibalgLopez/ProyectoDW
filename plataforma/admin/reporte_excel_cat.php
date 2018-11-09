@@ -10,12 +10,13 @@ $finales3=0;
 
 // CUERIS DE CONSULTA A BASE DE DATOS 
 	$resultado =mysqli_query ($con,"SELECT * FROM tb_catedratico order by tb_catedratico.ID_CATEDRATICO");
-	$query3 = mysqli_query ($con,"SELECT tb_usuario.ID_USUARIO, tb_usuario.NOM_USUARIO FROM tb_catedratico INNER JOIN tb_usuario on tb_catedratico.ID_USUARIO=tb_usuario.ID_USUARIO order by tb_catedratico.ID_CATEDRATICO");
+	$query3 = mysqli_query ($con,"SELECT tb_usuario.ID_USUARIO, tb_usuario.NOM_USUARIO, tb_usuario.PASS_USUARIO FROM tb_catedratico INNER JOIN tb_usuario on tb_catedratico.ID_USUARIO=tb_usuario.ID_USUARIO order by tb_catedratico.ID_CATEDRATICO");
 	
 	// CONSULTAMOS LOS DATOS DE LA TABLA TB_USUARIO Y LOS GUARDAOS EN EL ARREGLO
 	while($row2 = mysqli_fetch_array($query3)){
 		$id_usu [$finales3] =   $row2['ID_USUARIO'];
 		$usuario3 [$finales3] = $row2['NOM_USUARIO'];
+		$password [$finales3] = $row2['PASS_USUARIO'];
 		$finales3++;
 		}
 	
@@ -37,7 +38,7 @@ $finales3=0;
 		// EL TITULO DEL REPORTE EN EXCEL
 		$tituloReporte = "UNIVERSIDAD MARIANO GALVEZ DE GUATEMALA REPORTE DE CATEDRÁTICOS";
 		// LOS TITULOS DE LOS DATOS 
-		$titulosColumnas = array('No.', 'Nombre ', 'Apellido', 'Telefono ', 'Email', 'Direccion', 'Usuario');
+		$titulosColumnas = array('No.', 'Nombre ', 'Apellido', 'Telefono ', 'Email', 'Direccion', 'Usuario', 'Contraseña');
 		
 		$objPHPExcel->setActiveSheetIndex(0)
         		    ->mergeCells('B2:H2');
@@ -51,7 +52,8 @@ $finales3=0;
         ->setCellValue('E3',  $titulosColumnas[3])
         ->setCellValue('F3',  $titulosColumnas[4])
         ->setCellValue('G3',  $titulosColumnas[5])
-		->setCellValue('H3',  $titulosColumnas[6]);
+		->setCellValue('H3',  $titulosColumnas[6])
+		->setCellValue('I3',  $titulosColumnas[7]);
 		
 		//Se agregan los datos de los alumnos
 		$i = 4; // SE DECLARA EN 4 PORQUE EN LA FILA No. 4 VA COMENSAR A ESCRIBIR LOS DATOS
@@ -66,7 +68,8 @@ $finales3=0;
             ->setCellValue('E'.$i, $fila['TEL_CATEDRATICO'])
             ->setCellValue('F'.$i, $fila['EMAIL_CATEDRATICO'])
             ->setCellValue('G'.$i, $fila['DIR_CATEDRATICO'])
-			->setCellValue('H'.$i, $fila = $usuario3[$x]);
+			->setCellValue('H'.$i, $fila = $usuario3[$x])
+			->setCellValue('I'.$i, $fila = $password[$x]);
 			 $i++;
 			 $firma++;
 			 $x++;
@@ -174,14 +177,14 @@ $finales3=0;
         ));
 		 
 
-		$objPHPExcel->getActiveSheet()->getStyle('B2:H2')->applyFromArray($estiloTituloReporte);
-		$objPHPExcel->getActiveSheet()->getStyle('B3:H3')->applyFromArray($estiloTituloColumnas);
-		$objPHPExcel->getActiveSheet()->setSharedStyle($estiloInformacion, "B3:H".($i-1));
+		$objPHPExcel->getActiveSheet()->getStyle('B2:I2')->applyFromArray($estiloTituloReporte);
+		$objPHPExcel->getActiveSheet()->getStyle('B3:I3')->applyFromArray($estiloTituloColumnas);
+		$objPHPExcel->getActiveSheet()->setSharedStyle($estiloInformacion, "B3:I".($i-1));
 
 
 		
 				
-		for($i = 'B'; $i <= 'H'; $i++){
+		for($i = 'B'; $i <= 'I'; $i++){
 			$objPHPExcel->setActiveSheetIndex(0)			
 				->getColumnDimension($i)->setAutoSize(TRUE);
 		}
@@ -210,6 +213,6 @@ $finales3=0;
 	}
 	   else{
 
-		header('Location: Reporte Catedraticos.php');
+		header('Location: reporte_catedraticos.php');
 	   }
 ?>

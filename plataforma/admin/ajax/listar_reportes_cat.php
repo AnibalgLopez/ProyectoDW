@@ -33,13 +33,14 @@ if($action == 'ajax'){
 	//loop through fetched data
 
 
-	$query3 = mysqli_query ($con,"SELECT tb_usuario.ID_USUARIO, tb_usuario.NOM_USUARIO FROM tb_catedratico INNER JOIN tb_usuario on tb_catedratico.ID_USUARIO=tb_usuario.ID_USUARIO order by tb_catedratico.ID_CATEDRATICO");
+	$query3 = mysqli_query ($con,"SELECT tb_usuario.ID_USUARIO, tb_usuario.NOM_USUARIO, tb_usuario.PASS_USUARIO FROM tb_catedratico INNER JOIN tb_usuario on tb_catedratico.ID_USUARIO=tb_usuario.ID_USUARIO order by tb_catedratico.ID_CATEDRATICO");
 
 
 
 // iniciamos un array donde vamos a meter lo datos de la tabla TB_USUARIO
 	$id_usu = array ();
 	$usuario3 = array ();
+	$password = array ();
 	$finales3=0;
 	
 
@@ -48,6 +49,7 @@ if($action == 'ajax'){
 	while($row2 = mysqli_fetch_array($query3)){
 		$id_usu [$finales3] =   $row2['ID_USUARIO'];
 		$usuario3 [$finales3] = $row2['NOM_USUARIO'];
+		$password [$finales3] = $row2['PASS_USUARIO'];
 		$finales3++;
 		}
 	
@@ -67,6 +69,7 @@ if($action == 'ajax'){
 						<th><a>Email </a></th>
 						<th><a>Direccion </a></th>
 						<th><a> Usuario </a> </th>
+						<th><a> Contraseña </a> </th>
 						<th></th>
 					</tr>
 				</thead>
@@ -105,6 +108,7 @@ if($action == 'ajax'){
 						    if ($cat_id_usuario == $id_usu[$x] ) { ?>
 
 						    <td ><?php echo $usuario3[$x];?></td>
+							<td ><?php echo $password[$x];?></td>
 					         <?php } }  ?>
 
 							
