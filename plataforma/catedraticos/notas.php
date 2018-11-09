@@ -1,13 +1,4 @@
-<?php 
-session_start();
-if (!isset($_SESSION["usuario"])) {
-    header('Location: ../../login.php');
-}
-else if ($_SESSION['usuario']['TIPO_USUARIO']!=1) {
-    header('Location: ../error.html');
-}
- ?>
-
+<?php include 'conpermisito.php';?>
 <?php include 'php/encabezado.php';?>
 <?php include 'php/panel-izquierdo.php';?>
 <?php include 'php/panel-superior.php';?>
