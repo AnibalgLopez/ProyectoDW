@@ -1,7 +1,7 @@
 <?php
 
 	if (empty($_POST['name'])){
-		$errors[] = "Ingresa el nombre del producto.";
+		$errors[] = "Ingresa el nombre del Alumno.";
 	} elseif (!empty($_POST['name'])){
 	require_once ("../conexion.php");//Contiene funcion que conecta a la base de datos
 	// escaping, additionally removing everything that could be (html/javascript-) code
@@ -11,28 +11,34 @@
 	$prod_ctry = mysqli_real_escape_string($mysqli,(strip_tags($_POST["category"],ENT_QUOTES)));
 	$stock = mysqli_real_escape_string($mysqli,(strip_tags($_POST["stock"],ENT_QUOTES)));
     $price = mysqli_real_escape_string($mysqli,(strip_tags($_POST["price"],ENT_QUOTES)));
-    $rad = mt_rand(300,5000);
+    $rad = mt_rand(5000,50000);
     
 
 	// REGISTER data into database
-    $sql = "INSERT INTO `tb_alumnos`(`NOM_ALUMNO`, `APE__ALUMNO`, `TEL_ALUMNO`, `EMAIL_ALUMNO`, `DIR_ALUMNO`, `ID_CARRERA`, `ID_USUARIO`) VALUES ('$prod_code','$prod_name','$lastname','$prod_ctry','$stock','$price','2')";
+    $sql2 = "INSERT INTO `tb_usuario`(`NOM_USUARIO`, `PASS_USUARIO`, `TIPO_USUARIO`, `FECHA_USUARIO`,`ESTADO_USUARIO`) VALUES ('$prod_ctry', '$rad', '2', CURRENT_TIMESTAMP,'1')";
 
-   // $sql2 = "INSERT INTO `tb_usuario`(`NOM_USUARIO`, `PASS_USUARIO`, `TIPO_USUARIO`, `FECHA_USUARIO`,`ESTADO_USUARIO`) VALUES ('$prod_ctry', '$rad', '2', CURRENT_TIMESTAMP,'1')";
+    $query2 = mysqli_query($mysqli, $sql2);
 
-    $query = mysqli_query($mysqli, $sql);
-   // $query2 = mysqli_query($mysqli, $sql2);
+    $sqluserid = mysqli_query($mysqli, "SELECT `ID_USUARIO` FROM `tb_usuario` WHERE `NOM_USUARIO` = '$prod_ctry'");
+    $idusuario = mysqli_fetch_array($sqluserid);
+   	$idusuario = $idusuario['ID_USUARIO'];
+
     // if product has been added successfully
-    if ($query) {
-        $messages[] = "Se ha guardado con éxito.";
+    if ($query2) {
+        $messages[] = "Se ha guardado con éxito el usuario.";
+
+         $sql = "INSERT INTO `tb_alumnos`(`NOM_ALUMNO`, `APE__ALUMNO`, `TEL_ALUMNO`,`EMAIL_ALUMNO`,`DIR_ALUMNO`,`ID_CARRERA`,`ID_USUARIO`) VALUES ('$prod_code', '$prod_name', '$lastname', '$prod_ctry', '$stock', '$price', '$idusuario' )";
+
+         $query = mysqli_query($mysqli, $sql);
     } else {
         $errors[] = "Lo sentimos, el registro falló. Por favor, regrese y vuelva a intentarlo.";
     }
 
-	/*if ($query2) {
+	if ($query) {
         $messages[] = "Se ha guardado con éxito.";
     } else {
         $errors[] = "Lo sentimos, el registro falló. Por favor, regrese y vuelva a intentarlo.";
-    }   */	
+    }  
 
 		
 	} else 
