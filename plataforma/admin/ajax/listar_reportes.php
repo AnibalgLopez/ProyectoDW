@@ -110,22 +110,35 @@ if($action == 'ajax'){
 							<td ><?php echo $alumno_direccion;?></td>
 							
 							<?php  
-							 for ($i = 1; $i< count($id_carr);$i++ ){
+
+							if($finales2==1){
+							 for ($i = 0; $i< count($id_carr);$i++ ){
 
 								if ($alumno_carrera2 == $id_carr[$i] ) { ?>
 
                                <td ><?php echo $carreras[$i];?></td>
-							<?php } }  ?>
+							<?php } }  }
+							
+							else{ 
+								
+								for ($i = 1; $i< count($id_carr);$i++ ){
 
+									if ($alumno_carrera2 == $id_carr[$i] ) { ?>
 
-								<?php  
+									<td ><?php echo $carreras[$i];?></td>
+								<?php } }
+								
+							}
+
+							?>
+
+							<?php  
 						    for ($x = 0; $x< count($id_usu);$x++ ){
 
 						    if ($alumno_id_usuario == $id_usu[$x] ) { ?>
 
 						    <td ><?php echo $usuario3[$x];?></td>
 					         <?php } }  ?>
-
 							
 						</tr>
 						<?php  	} ?>
