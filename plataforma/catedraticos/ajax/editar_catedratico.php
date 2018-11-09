@@ -5,18 +5,17 @@
 	} elseif (!empty($_POST['edit_id'])){
 	require_once ("../conexion.php");//Contiene funcion que conecta a la base de datos
 	// escaping, additionally removing everything that could be (html/javascript-) code
-    $idC = mysqli_real_escape_string($mysqli,(strip_tags($_POST["edit_code"],ENT_QUOTES)));
-	$nombre = mysqli_real_escape_string($mysqli,(strip_tags($_POST["edit_name"],ENT_QUOTES)));
-	$apellido = mysqli_real_escape_string($mysqli,(strip_tags($_POST["edit_lastname"],ENT_QUOTES)));
-	$telefono = mysqli_real_escape_string($mysqli,(strip_tags($_POST["edit_category"],ENT_QUOTES)));
-    $correo = mysqli_real_escape_string($mysqli,(strip_tags($_POST["edit_stock"],ENT_QUOTES)));
-    $direccion = mysqli_real_escape_string($mysqli,(strip_tags($_POST["edit_price"],ENT_QUOTES)));
-    $id_usuario= mysqli_real_escape_string($mysqli,(strip_tags($_POST["edit_vecindad"],ENT_QUOTES)));
+	$nombre = mysqli_real_escape_string($mysqli,(strip_tags($_POST["edit_code"],ENT_QUOTES)));
+	$apellido = mysqli_real_escape_string($mysqli,(strip_tags($_POST["edit_name"],ENT_QUOTES)));
+	$telefono = mysqli_real_escape_string($mysqli,(strip_tags($_POST["edit_lastname"],ENT_QUOTES)));
+    $correo = mysqli_real_escape_string($mysqli,(strip_tags($_POST["edit_category"],ENT_QUOTES)));
+    $direccion = mysqli_real_escape_string($mysqli,(strip_tags($_POST["edit_stock"],ENT_QUOTES)));
+    $id_usuario= mysqli_real_escape_string($mysqli,(strip_tags($_POST["edit_id"],ENT_QUOTES)));
 	
     
 	$id=intval($_POST['edit_id']);
 	// UPDATE data into database
-    $sql = "UPDATE TB_CATEDRATICO SET ID_CATEDRATICO='".$idC."', NOM_CATEDRATICO='".$nombre."', APE_CATEDRATICO ='".$apellido."', TEL_CATEDRATICO='".$telefono."', EMAIL_CATEDRATICO='".$correo."', DIR_CATEDRATICO='".$direccion."', ID_USUARIO='".$id_usuario."' WHERE ID_CATEDRATICO='".$id."' ";
+    $sql = "UPDATE TB_CATEDRATICO SET NOM_CATEDRATICO='".$nombre."', APE_CATEDRATICO ='".$apellido."', TEL_CATEDRATICO='".$telefono."', EMAIL_CATEDRATICO='".$correo."', DIR_CATEDRATICO='".$direccion."', ID_USUARIO='".$id_usuario."' WHERE ID_CATEDRATICO='".$id."' ";
     $query = mysqli_query($mysqli,$sql);
     // if catedratico has been added successfully
     if ($query) {

@@ -55,7 +55,7 @@ else if ($_SESSION['usuario']['TIPO_USUARIO']!=1) {
 
 	<?php include 'php/pie-pagina.php';?>
 	
-	<script src="js/script.js"></script>
+	<script src="js/script_catedratico.js"></script>
 
 	
 </body>

@@ -4,7 +4,6 @@
 	} elseif (!empty($_POST['name'])){*/
 	require_once ("../conexion.php");//Contiene funcion que conecta a la base de datos
     // escaping, additionally removing everything that could be (html/javascript-) code
-    
 	$nombre = mysqli_real_escape_string($mysqli,(strip_tags($_POST["nombre"],ENT_QUOTES)));
 	$apellido = mysqli_real_escape_string($mysqli,(strip_tags($_POST["apellido"],ENT_QUOTES)));
 	$telefono = mysqli_real_escape_string($mysqli,(strip_tags($_POST["telefono"],ENT_QUOTES)));

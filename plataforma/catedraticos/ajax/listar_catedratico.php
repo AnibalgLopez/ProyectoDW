@@ -10,16 +10,9 @@ if($action == 'ajax'){
 
 	$tables="tb_catedratico";
 	$campos="*";
-    $sWhere="vecindad LIKE '%".$query."%'
-	OR lugar LIKE '%".$query."%'
-	OR last_name LIKE '%".$query."%'
-	OR prod_name LIKE '%".$query."%'
-	OR prod_ctry LIKE '%".$query."%'
-	OR prod_qty LIKE '%".$query."%'
-	OR prod_code LIKE '%".$query."%'
-	OR price LIKE '%".$query."%'
-	OR estado LIKE '%".$query."%'
-	OR fecha LIKE '%".$query."%'
+    $sWhere="ID_CATEDRATICO LIKE '%".$query."%'
+	OR NOM_CATEDRATICO LIKE '%".$query."%'
+	OR APE_CATEDRATICO LIKE '%".$query."%'
 	";
     $sWhere.=" order by tblprod.prod_name";
 	
@@ -56,7 +49,7 @@ if($action == 'ajax'){
                         <th class='text-center'>APELLIDO</th>
 						<th class='text-center'>TELEFONO </th>
 						<th class='text-center'>CORREO ELECTRONICO</th>
-						<th class='text-right'>DIRECCION</th>
+						<th class='text-center'>DIRECCION</th>
                         <th class='text-center'>ID_USUARIO</th>
 						<th></th>
 					</tr>
@@ -75,14 +68,15 @@ if($action == 'ajax'){
 							$finales++;
 						?>	
 						<tr class="<?php;?>">
+							<td class='text-center'><?php echo $product_id;?></td>
 							<td class='text-center'><?php echo $prod_code;?></td>
-							<td class='text-center'><?php echo $prod_name;?></td>
-                            <td class='text-center'><?php echo $lastname;?></td>
+                            <td class='text-center'><?php echo $prod_name;?></td>
+							<td class='text-center'><?php echo $lastname;?></td>
 							<td class='text-center'><?php echo $prod_ctry;?></td>
 							<td class='text-center'><?php echo $prod_qty;?></td>
-							<td class='text-right'><?php echo $price;?></td>
+							<td class='text-center'><?php echo $price;?></td>
 							<td>
-								<a href="#"  data-target="#editProductModal" class="edit" data-toggle="modal" data-code='<?php echo $prod_code;?>' data-name="<?php echo $prod_name?>" data-lastname="<?php echo $lastname?>" data-category="<?php echo $prod_ctry?>" data-stock="<?php echo $prod_qty?>" data-price="<?php echo $price;?>" data-vecindad="<?php echo $vecindad;?>" data-lugar="<?php echo $lugar;?>" data-estado="<?php echo $estado;?>" data-fecha="<?php echo $fecha;?>" data-id="<?php echo $product_id; ?>"><i class="material-icons" data-toggle="tooltip" title="Editar" >&#xE254;</i></a>
+								<a href="#"  data-target="#editProductModal" class="edit" data-toggle="modal" data-code='<?php echo $prod_code;?>' data-name="<?php echo $prod_name?>" data-lastname="<?php echo $lastname?>" data-category="<?php echo $prod_ctry?>" data-stock="<?php echo $prod_qty?>" data-price="<?php echo $price;?>" data-id="<?php echo $product_id; ?>"><i class="material-icons" data-toggle="tooltip" title="Editar" >&#xE254;</i></a>
 								<a href="#deleteProductModal" class="delete" data-toggle="modal" data-id="<?php echo $product_id;?>"><i class="material-icons" data-toggle="tooltip" title="Eliminar">&#xE872;</i></a>
                     		</td>
 						</tr>
