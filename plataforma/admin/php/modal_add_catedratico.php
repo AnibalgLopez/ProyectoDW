@@ -26,11 +26,7 @@
 						<div class="form-group">
 							<label>Dirección</label>
 							<input type="text" name="direccion" id="direccion" class="form-control" required>
-						</div>
-                        <div class="form-group">
-							<label>Id usuario</label>
-							<input type="text" name="id_usuario" id="id_usuario" class="form-control" required>
-						</div>		
+						</div>	
                         			
 					</div>
 					<div class="modal-footer">
