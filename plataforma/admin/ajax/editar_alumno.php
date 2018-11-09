@@ -13,7 +13,7 @@
     
 	$id=intval($_POST['edit_id']);
 	// UPDATE data into database
-    $sql = "UPDATE `tb_alumnos` SET `NOM_ALUMNO`='".$prod_code."',`APE_ALUMNO`='".$prod_name."',`TEL_ALUMNO`='".$lastname."',`EMAIL_ALUMNO`='".$prod_ctry."',`DIR_ALUMNO`='".$stock."',`ID_CARRERA`='".$price."' WHERE ID_ALUMNO = '".$id."'";
+    $sql = "UPDATE `tb_alumnos` SET `NOM_ALUMNO`='".$prod_code."',`APE__ALUMNO`='".$prod_name."',`TEL_ALUMNO`='".$lastname."',`EMAIL_ALUMNO`='".$prod_ctry."',`DIR_ALUMNO`='".$stock."',`ID_CARRERA`='".$price."' WHERE ID_ALUMNO = '".$id."'";
 
     $query = mysqli_query($mysqli,$sql);
     // if product has been added successfully
