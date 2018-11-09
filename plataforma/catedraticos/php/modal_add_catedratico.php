@@ -8,7 +8,7 @@
 					</div>
 					<div class="modal-body">					
 						<div class="form-group">
-							<label>Id catedratico</label>
+							<label>Id del catedratico</label>
 							<input type="text" name="idC"  id="idC" class="form-control" required>
 							
 						</div>
