@@ -18,12 +18,9 @@ $sql =mysqli_query ($mysqli, "SELECT * FROM TB_USUARIO WHERE NOM_USUARIO = '$usu
 // condicion donde evaluamos el resultado del cuery que se almaceno en $sql si es igual que 1 es por que si existe 
 // el usuario y si no se va a un else y nos manda a que nos logiemos otra vez
 if (mysqli_num_rows($sql) == 1) {
+    $datos=$sql->fetch_assoc();
 
-
-
-    // Para almacenar datos del usuario para mientras esta concetado
-    $_SESSION["usuario"] = $usuario;
-    $_SESSION["password"] = $pass;
+    $_SESSION["usuario"] = $datos;
 
 
     

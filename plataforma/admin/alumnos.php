@@ -3,11 +3,15 @@ session_start();
 if (!isset($_SESSION["usuario"])) {
     header('Location: ../../login.php');
 }
+else if ($_SESSION['usuario']['TIPO_USUARIO']!=0) {
+    header('Location: ../error.html');
+}
  ?>
 
 <?php include 'php/encabezado.php';?>
 <?php include 'php/panel-izquierdo.php';?>
 <?php include 'php/panel-superior.php';?>
+
 <body>
 
     <div class="container">
