@@ -11,14 +11,14 @@
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-					 <h2>REPORTES DE ALUMNOS UMG</h2> 
+					 <h2>REPORTES DE CATEDRÁTICOS UMG</h2> 
 					</div>
 			
 					<div class="col-sm-6">
 				
 
 
-          <form id="formulario" action="reporte_excel.php" >
+          <form id="formulario" action="reporte_excel_cat.php" >
             <div class="form-group">
               <div class="form-label-group">
 
@@ -57,6 +57,6 @@
 
     <?php include 'php/pie-pagina.php';?>
 
-	<script src="js/script_reportes.js"></script>
+	<script src="js/script_reportes_cat.js"></script>
 </body>
 </html>                                		                            
