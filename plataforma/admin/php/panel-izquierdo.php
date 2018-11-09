@@ -28,6 +28,9 @@
                                 <li><a title="Add Students" href="asig-alumnos.php"><span class="mini-sub-pro">Asignar Alumnos</span></a></li>
                             </ul>
                         <li>
+                        <li>
+                            <a class="submenu-angle chart-mini-nb-dp" href="reporte_alumnos.php" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Reportes</span></a>
+                        </li>
                             <a class="submenu-angle" href="salir.php" aria-expanded="false"><span class="educate-icon educate-student icon-wrap"></span> <span class="mini-click-non">Cerrar sesion</span></a>
                         </li>
                         </li>
