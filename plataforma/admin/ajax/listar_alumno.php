@@ -61,7 +61,7 @@ if($action == 'ajax'){
 						while($row = mysqli_fetch_array($query)){	
 							$product_id=$row['ID_ALUMNO'];
 							$prod_code=$row['NOM_ALUMNO'];
-                            $prod_name=$row['APE__ALUMNO'];
+                            $prod_name=$row['APE_ALUMNO'];
                             $lastname=$row['TEL_ALUMNO'];
 							$prod_ctry=$row['EMAIL_ALUMNO'];
 							$prod_qty=$row['DIR_ALUMNO'];
