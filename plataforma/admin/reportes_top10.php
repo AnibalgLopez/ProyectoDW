@@ -11,7 +11,7 @@
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-					 <h2>REPORTES DE ALUMNOS UMG</h2> 
+					 <h2>REPORTES DEL TOP 10 ALUMNOS UMG</h2> 
 					</div>
 			
 					<div class="col-sm-6">
@@ -57,6 +57,6 @@
 
     <?php include 'php/pie-pagina.php';?>
 
-	<script src="js/script_reportes.js"></script>
+	<script src="js/script_reportes_top10.js"></script>
 </body>
 </html>                                		                            
