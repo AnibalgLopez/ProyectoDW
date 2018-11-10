@@ -33,6 +33,7 @@ if($action == 'ajax'){
 	//loop through fetched data
 
 	$query2 = mysqli_query ($con,"SELECT tb_carrera.NOM_CARRERA, tb_carrera.ID_CARRERA FROM tb_alumnos INNER JOIN tb_carrera on tb_alumnos.ID_CARRERA=tb_carrera.ID_CARRERA order by tb_alumnos.ID_ALUMNO "); 
+
 	$query3 = mysqli_query ($con,"SELECT tb_usuario.ID_USUARIO, tb_usuario.NOM_USUARIO FROM tb_alumnos INNER JOIN tb_usuario on tb_alumnos.ID_USUARIO=tb_usuario.ID_USUARIO order by tb_alumnos.ID_ALUMNO");
 
 	
@@ -73,11 +74,8 @@ if($action == 'ajax'){
 					    <th> <a> No. </a></th>
 						<th><a>Nombre </a></th>
 						<th><a>Apellido </a></th>
-						<th><a>Telefono </a></th>
-						<th><a>Email </a></th>
-						<th><a>Direccion </a></th>
 						<th><a>Carrera </a></th>
-						<th><a> Usuario </a> </th>
+						<th><a> Promedio </a> </th>
 						<th></th>
 					</tr>
 				</thead>
@@ -90,9 +88,7 @@ if($action == 'ajax'){
 							$alumno_id=$row['ID_ALUMNO'];
 							$alumno_name=$row['NOM_ALUMNO'];
 							$alumno_ape=$row['APE_ALUMNO'];
-							$alumno_telefono=$row['TEL_ALUMNO'];
-							$alumno_email=$row['EMAIL_ALUMNO'];
-							$alumno_direccion=$row['DIR_ALUMNO'];
+							
 							$alumno_carrera2=$row['ID_CARRERA'];
 							$alumno_id_usuario=$row['ID_USUARIO'];
 							$finales++;
@@ -105,9 +101,6 @@ if($action == 'ajax'){
                           <td class='text-center' ><?php echo $alumno_id;?></td>
 							<td ><?php echo $alumno_name;?></td>
 							<td ><?php echo $alumno_ape;?></td>
-							<td ><?php echo $alumno_telefono;?></td>
-							<td ><?php echo $alumno_email;?></td>
-							<td ><?php echo $alumno_direccion;?></td>
 							
 							<?php  
 

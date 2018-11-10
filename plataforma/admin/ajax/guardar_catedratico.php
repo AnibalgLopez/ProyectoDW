@@ -17,10 +17,10 @@
 	$query2 = mysqli_query($mysqli, $sql2);
 
 	$sqluserid = mysqli_query($mysqli, "SELECT `ID_USUARIO` FROM `tb_usuario` WHERE `NOM_USUARIO` = '$correo'");
-    $idusuario = mysqli_fetch_array($sqluserid);
-   	$idusuario = $idusuario['ID_USUARIO'];
+    		$idusuario2 = mysqli_fetch_array($sqluserid);
+   	        $idusuario2 = $idusuario2['ID_USUARIO'];
     
-    
+   			
     
     
     
@@ -28,15 +28,22 @@
     if ($query2) {
         $messages[] = "El catedratico ha sido guardada con éxito.";
 
-        	$sql = "INSERT INTO TB_CATEDRATICO(NOM_CATEDRATICO,APE_CATEDRATICO,TEL_CATEDRATICO,EMAIL_CATEDRATICO,DIR_CATEDRATICO,ID_USUARIO)
-    VALUES ('$nombre','$apellido', '$telefono', '$correo','$direccion','$idusuario')";
+        	$sql = "INSERT INTO `tb_catedratico`(`NOM_CATEDRATICO`, `APE_CATEDRATICO`, `TEL_CATEDRATICO`, `EMAIL_CATEDRATICO`, `DIR_CATEDRATICO`, `ID_USUARIO`) VALUES ('$nombre','$apellido', '$telefono', '$correo','$direccion','$idusuario2')";
 
-    $query = mysqli_query($mysqli,$sql);
+    		$query = mysqli_query($mysqli, $sql);
 
     } else {
         $errors[] = "Lo sentimos, el registro falló. Por favor, regrese y vuelva a intentarlo.";
     }
-} 
+    if ($query) {
+        $messages[] = "Se ha guardado con éxito.";
+    } else {
+        $errors[] = "Lo sentimos, el registro falló. Por favor, regrese y vuelva a intentarlo.";
+    }  
+}  else 
+	{
+		$errors[] = "desconocido.";
+	}
 
 
 if (isset($errors)){
