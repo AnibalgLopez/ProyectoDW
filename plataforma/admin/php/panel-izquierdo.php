@@ -7,11 +7,13 @@
             <div class="left-custom-menu-adp-wrap comment-scrollbar">
                 <nav class="sidebar-nav left-sidebar-menu-pro">
                     <ul class="metismenu" id="menu1">
+                        
                         <li class="active">
-                        <li>
+                            <li>
                             <a class="submenu-angle chart-mini-nb-dp" href="carrera.php" aria-expanded="false"><span class="educate-icon educate-home icon-wrap"></span> <span class="mini-click-non">Carreras</span></a>
+                            </li>
                         </li>
-                        </li>
+                        
                         <li>
                             <a class="submenu-angle chart-mini-nb-dp" href="catedraticos.php" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span> <span class="mini-click-non">Catedráticos</span></a>
                         </li>
@@ -22,27 +24,33 @@
                             <a class="submenu-angle chart-mini-nb-dp" href="cursos.php" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Cursos</span></a>
                         </li>
                         
+                        
                         <li>
-                            <a class="has-arrow" href="#" aria-expanded="false"><span class="educate-icon educate-form icon-wrap"></span> <span class="mini-click-non">Asignaciones</span></a>
+                            <a class="has-arrow" href="" aria-expanded="false"><span class="educate-icon educate-form icon-wrap"></span> <span class="mini-click-non">Asignaciones</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
 
                                 <li><a title="All Students" href="asig-catedraticos.php"><span class="mini-sub-pro">Asignar Catedráticos</span></a></li>
 
                                 <li><a title="Add Students" href="asig-alumnos.php"><span class="mini-sub-pro">Asignar Alumnos</span></a></li>
                             </ul>
-                        <li>
+                        </li>
+                            
 
+                      
                         <li>
-                        <a class="has-arrow" href="#" aria-expanded="false"><span class="educate-icon educate-form icon-wrap"></span> <span class="mini-click-non">Reportes</span></a>
+                            <a class="has-arrow" href="" aria-expanded="false"><span class="educate-icon educate-form icon-wrap"></span> <span class="mini-click-non">Reportes</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
+                                
                                 <li><a title="All Students" href="reporte_catedratico.php"><span class="mini-sub-pro">Reportes Catedráticos</span></a></li>
                                 <li><a title="Add Students" href="reporte_alumnos.php"><span class="mini-sub-pro">Reportes Alumnos</span></a></li>
                                 <li><a title="Add Students" href="reporte_top10.php"><span class="mini-sub-pro">Reporte Top 10</span></a></li>
                             </ul>
+                        </li>
+
                         <li>
                             <a class="submenu-angle" href="salir.php" aria-expanded="false"><span class="educate-icon educate-student icon-wrap"></span> <span class="mini-click-non">Cerrar sesion</span></a>
                         </li>
-                        </li>
+                        
                     </ul>
                 </nav>
             </div>

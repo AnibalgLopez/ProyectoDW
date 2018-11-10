@@ -1,7 +1,16 @@
+
+
 <?php include 'conpermisito.php';?>
 <?php include 'php/encabezado.php';?>
 <?php include 'php/panel-izquierdo.php';?>
 <?php include 'php/panel-superior.php';?>
+
+<head>
+<meta charset="utf-8" lang="es">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alumnos </title>
+</head>
 
 <body>
 
@@ -44,6 +53,10 @@
 	<?php include("php/modal_edit_carrera.php");?>
 	<!-- Delete Modal php -->
 	<?php include("php/modal_delete_carrera.php");?>
+
+	
+
 	<script src="js/script_carrera.js"></script>
 </body>
-</html>
+
+
