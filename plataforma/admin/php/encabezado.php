@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" lang="es">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
