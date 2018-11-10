@@ -38,9 +38,8 @@
 
 	//vamos a buscar las notas del alumno con el id alumno obtenido anteriormente
 
-	$query_notas = mysqli_query($mysqli,"SELECT tb_notas.ID_CURSO, tb_notas.PP_NOTA, tb_notas.SP_NOTA, tb_notas.ACT_NOTA, tb_notas.EF_NOTA,
-	SUM(PP_NOTA + SP_NOTA + ACT_NOTA + EF_NOTA) AS TOTAL FROM tb_alumnos
-	INNER JOIN tb_notas ON tb_alumnos.ID_ALUMNO=tb_notas.ID_ALUMNO
+	$GLOBALS['query_notas'] = mysqli_query($mysqli,"SELECT tb_notas.ID_CURSO, tb_notas.PP_NOTA, tb_notas.SP_NOTA, tb_notas.ACT_NOTA, tb_notas.EF_NOTA
+	FROM tb_alumnos INNER JOIN tb_notas ON tb_alumnos.ID_ALUMNO=tb_notas.ID_ALUMNO
 	WHERE tb_alumnos.ID_ALUMNO = $id_alumno");
 
 	$indice = 0;
@@ -75,10 +74,9 @@
 				</thead>
 				<tbody>	
 						<?php
-						
-						$query_notas = mysqli_query($mysqli,"SELECT tb_notas.ID_CURSO, tb_notas.PP_NOTA, tb_notas.SP_NOTA, tb_notas.ACT_NOTA, tb_notas.EF_NOTA,
-						SUM(PP_NOTA + SP_NOTA + ACT_NOTA + EF_NOTA) AS TOTAL FROM tb_alumnos
-						INNER JOIN tb_notas ON tb_alumnos.ID_ALUMNO=tb_notas.ID_ALUMNO
+
+						$GLOBALS['query_notas'] = mysqli_query($mysqli,"SELECT tb_notas.ID_CURSO, tb_notas.PP_NOTA, tb_notas.SP_NOTA, tb_notas.ACT_NOTA, tb_notas.EF_NOTA
+						FROM tb_alumnos INNER JOIN tb_notas ON tb_alumnos.ID_ALUMNO=tb_notas.ID_ALUMNO
 						WHERE tb_alumnos.ID_ALUMNO = $id_alumno");
 
 						$indice = 0; 
@@ -88,17 +86,20 @@
 							$parcial2=$row['SP_NOTA'];
 							$actividades=$row['ACT_NOTA'];
 							$examen=$row['EF_NOTA'];
-							$total=$row['TOTAL'];		
+							$total=$parcial1+$parcial2+$actividades+$examen;
+							$nombre=$nom_curso[$indice];
+							$indice++; 
 							$finales++;
 						?>	
 						<tr class="<?php echo $text_class;?>">
 							<td class='text-center' >
-									<td class='text-center'><?php echo $nom_curso[$indice];?></td>
+									<td class='text-center'><?php echo $nombre;?></td>
 									<td class='text-center'><?php echo $parcial1;?></td>
 									<td class='text-center'><?php echo $parcial2;?></td>
 									<td class='text-center'><?php echo $actividades;?></td>
 									<td class='text-center'><?php echo $examen;?></td>
 									<td class='text-center'><?php echo $total;?></td>
+									
 							</td>
 						</tr>
 						<?php }?>
