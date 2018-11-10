@@ -43,7 +43,7 @@
                                 
                                 <li><a title="All Students" href="reporte_catedratico.php"><span class="mini-sub-pro">Reportes Catedráticos</span></a></li>
                                 <li><a title="Add Students" href="reporte_alumnos.php"><span class="mini-sub-pro">Reportes Alumnos</span></a></li>
-                                <li><a title="Add Students" href="reporte_top10.php"><span class="mini-sub-pro">Reporte Top 10</span></a></li>
+                                <li><a title="Add Students" href="reportes_top10.php"><span class="mini-sub-pro">Reporte Top 10</span></a></li>
                             </ul>
                         </li>
 
