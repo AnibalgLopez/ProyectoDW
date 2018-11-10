@@ -12,9 +12,6 @@
                     <div class="col-sm-6">
 						<h2><b>Cursos</b></h2>
 					</div>
-					<div class="col-sm-6">
-						<a href="#addProductModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Agregar curso</span></a>
-					</div>
                 </div>
             </div>
 			<div class='col-sm-4 pull-right'>
